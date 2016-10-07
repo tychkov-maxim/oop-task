@@ -53,6 +53,10 @@ public class TaxiStation {
 
     @Override
     public String toString() {
-      return name + ",Колличество машин: " + cars.size();
+      String res = "Название таксопарка: " + name + "\nКолличество машин: " + cars.size();
+        for(Vehicle r : cars)
+            res += "\n" + r;
+
+        return res;
     }
 }

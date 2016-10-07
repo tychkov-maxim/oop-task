@@ -9,4 +9,9 @@ public class Car extends Vehicle {
         this.segment = segment;
     }
 
+
+    @Override
+    public String toString() {
+        return getBrand();
+    }
 }
