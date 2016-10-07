@@ -9,16 +9,12 @@ import java.util.Comparator;
 import java.util.List;
 
 public class TaxiStation {
-    public List<Vehicle> cars;
+    private List<Vehicle> cars;
     private String name;
-    //private Countable countCost;
-
-
 
     public TaxiStation(String name, List<Vehicle> cars) {
         this.name = name;
         this.cars = cars;
-
     }
 
 
@@ -31,35 +27,32 @@ public class TaxiStation {
         return null;
     }
 
-    public int getAllCost(){
-        int res = 0;
-
-        for(Vehicle r : cars){
-           res += r.getCost();
-        }
-
-        return res;
+    public int getAllCost(Countable countCost){
+       return countCost.getCost(cars);
     }
 
-
-
     public static class Builder{
-        public  static TaxiStation CreateTestTaxiStation(String name){
+        public  static TaxiStation CreateTestTaxiStation(){
 
 
             Car car1 = new Car("Toyota","S",1100,110,5.0);
             Car car2 = new Car("Mercedes","S",2000,100,2.0);
             Car car3 = new Car("Ferrari","S",3300,220,8.0);
 
-            List<Vehicle> cars = new ArrayList<Vehicle>();
+            List<Vehicle> cars = new ArrayList<>();
 
             cars.add(car1);
             cars.add(car2);
             cars.add(car3);
 
-            return new TaxiStation(name,cars);
+            return new TaxiStation("test",cars);
         }
 
     }
 
+
+    @Override
+    public String toString() {
+      return name + ",Колличество машин: " + cars.size();
+    }
 }
