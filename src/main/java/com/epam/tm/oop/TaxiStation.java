@@ -1,6 +1,7 @@
 package com.epam.tm.oop;
 
 import com.epam.tm.oop.actions.Countable;
+import com.epam.tm.oop.actions.FindVehicle;
 import com.epam.tm.oop.entities.Car;
 import com.epam.tm.oop.entities.Vehicle;
 
@@ -22,9 +23,8 @@ public class TaxiStation {
         cars.sort(comparatorForSort);
     }
 
-    public Vehicle findVehicle(){
-
-        return null;
+    public Vehicle findVehicle(FindVehicle finder, int parameter){
+        return finder.find(cars,parameter);
     }
 
     public int getAllCost(Countable countCost){
