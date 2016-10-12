@@ -1,14 +1,15 @@
 package com.epam.tm.oop.service;
 
+import com.epam.tm.oop.entity.TaxiStation;
 import com.epam.tm.oop.entity.Vehicle;
 
 import java.util.List;
 
-public class CountAllCost implements Countable{
-    @Override
-    public int getCost(List<Vehicle> vehicles) {
+public class CountCostService{
+
+    public int getTotalCostofCars(TaxiStation station) {
         int res = 0;
-        for (Vehicle r : vehicles)
+        for (Vehicle r : station.getVehicles())
             res += r.getCost();
 
         return res;

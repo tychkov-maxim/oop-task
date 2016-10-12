@@ -1,5 +1,7 @@
 package com.epam.tm.oop;
 
+import com.epam.tm.oop.entity.TaxiStation;
+import com.epam.tm.oop.service.CountCostService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,14 +14,16 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
 
-            log.info(new String(Character.toChars(0x1f602)));
 //        Properties propertyManager = new Properties();
 //        propertyManager.load(Main.class.getClassLoader().getResourceAsStream("hello.properties"));
 //        log.warn(propertyManager.getProperty("hello.world"));
 //
-//        TaxiStation taxi = TaxiStation.Builder.CreateTestTaxiStation();
-//        log.info(taxi.toString());
+        TaxiStation taxi = TaxiStation.Builder.CreateTestTaxiStation();
+        log.info(taxi.toString());
 //
+
+        CountCostService countCostService = new CountCostService();
+        log.info(String.valueOf(countCostService.getTotalCostofCars(taxi)));
 //        SortByConsumption sorter = new SortByConsumption();
 //        taxi.sort(sorter);
 //

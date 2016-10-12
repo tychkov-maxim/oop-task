@@ -2,7 +2,7 @@ package com.epam.tm.oop.entity.impl;
 
 import com.epam.tm.oop.entity.Vehicle;
 
-public class Car extends Vehicle {
+public class Car extends Vehicle implements Cloneable {
 
     private String segment;
 
@@ -12,6 +12,10 @@ public class Car extends Vehicle {
         this.segment = segment;
     }
 
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
 
     @Override
     public String toString() {

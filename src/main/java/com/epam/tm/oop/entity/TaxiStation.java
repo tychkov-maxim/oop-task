@@ -18,17 +18,32 @@ public class TaxiStation {
     }
 
 
-    public void sort(Comparator<Vehicle> comparatorForSort){
-        cars.sort(comparatorForSort);
+    public boolean addVehicle(Vehicle vehicle){
+        if (vehicle != null) {
+            cars.add(vehicle);
+            return true;
+        }else
+            return false;
     }
 
-    public Vehicle findVehicle(FindVehicle finder, int parameter){
-        return finder.find(cars,parameter);
+    public List<Vehicle> getVehicles(){
+
+        List<Vehicle> vehicles = new ArrayList<>();
+        vehicles.addAll(cars);
+
+        return vehicles;
     }
 
-    public int getAllCost(Countable countCost){
-       return countCost.getCost(cars);
+    public String getName() {
+        return name;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
+
 
     public static class Builder{
         public  static TaxiStation CreateTestTaxiStation(){
@@ -46,7 +61,6 @@ public class TaxiStation {
 
             return new TaxiStation("test",cars);
         }
-
     }
 
 

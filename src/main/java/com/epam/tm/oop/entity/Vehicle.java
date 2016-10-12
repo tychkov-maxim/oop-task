@@ -1,6 +1,6 @@
 package com.epam.tm.oop.entity;
 
-public abstract class Vehicle {
+public abstract class Vehicle implements Cloneable{
 
     private String brand;
     private int cost;
