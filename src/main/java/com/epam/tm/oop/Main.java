@@ -11,10 +11,6 @@ public class Main {
 
     public static void main(String[] args){
 
-//        Properties propertyManager = new Properties();
-//        propertyManager.load(Main.class.getClassLoader().getResourceAsStream("hello.properties"));
-//        log.warn(propertyManager.getProperty("hello.world"));
-//
 
         TaxiStation taxiStation = TaxiStation.Builder.CreateTestTaxiStation();
         log.info("List of vehicles {}",taxiStation.getVehicles());
