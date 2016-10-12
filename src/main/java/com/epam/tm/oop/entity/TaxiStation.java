@@ -1,9 +1,8 @@
-package com.epam.tm.oop;
+package com.epam.tm.oop.entity;
 
-import com.epam.tm.oop.actions.Countable;
-import com.epam.tm.oop.actions.FindVehicle;
-import com.epam.tm.oop.entities.Car;
-import com.epam.tm.oop.entities.Vehicle;
+import com.epam.tm.oop.service.Countable;
+import com.epam.tm.oop.service.FindVehicle;
+import com.epam.tm.oop.entity.impl.Car;
 
 import java.util.ArrayList;
 import java.util.Comparator;

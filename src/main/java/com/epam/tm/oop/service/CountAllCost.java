@@ -1,6 +1,6 @@
-package com.epam.tm.oop.actions;
+package com.epam.tm.oop.service;
 
-import com.epam.tm.oop.entities.Vehicle;
+import com.epam.tm.oop.entity.Vehicle;
 
 import java.util.List;
 

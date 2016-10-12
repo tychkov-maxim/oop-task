@@ -1,17 +1,17 @@
-package com.epam.tm.oop.entities;
+package com.epam.tm.oop.entity;
 
 public abstract class Vehicle {
 
     private String brand;
     private int cost;
     private int maxSpeed;
-    private double consuption;
+    private double consumption;
 
-    public Vehicle(String brand, int cost, int maxSpeed, double consuption) {
+    public Vehicle(String brand, int cost, int maxSpeed, double consumption) {
         this.brand = brand;
         this.cost = cost;
         this.maxSpeed = maxSpeed;
-        this.consuption = consuption;
+        this.consumption = consumption;
     }
 
     public String getBrand() {
@@ -38,12 +38,12 @@ public abstract class Vehicle {
         this.maxSpeed = maxSpeed;
     }
 
-    public double getConsuption() {
-        return consuption;
+    public double getConsumption() {
+        return consumption;
     }
 
-    public void setConsuption(int consuption) {
-        this.consuption = consuption;
+    public void setConsumption(int consumption) {
+        this.consumption = consumption;
     }
 
 
