@@ -1,8 +1,8 @@
-package com.epam.tm.oop.entity.impl;
+package com.epam.tm.oop.entity;
 
 import com.epam.tm.oop.entity.Vehicle;
 
-public class Car extends Vehicle implements Cloneable {
+public class Car extends Vehicle{
 
     private String segment;
 
@@ -10,11 +10,6 @@ public class Car extends Vehicle implements Cloneable {
         super(brand, cost, maxSpeed, consumption);
 
         this.segment = segment;
-    }
-
-    @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
     }
 
     @Override

@@ -1,7 +1,5 @@
 package com.epam.tm.oop.entity;
 
-import com.epam.tm.oop.entity.impl.Car;
-
 import java.util.ArrayList;
 import java.util.List;
 
