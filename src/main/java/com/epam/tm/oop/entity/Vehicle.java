@@ -1,17 +1,27 @@
 package com.epam.tm.oop.entity;
 
+import org.joda.money.Money;
+
 public abstract class Vehicle{
 
+
+    private int id;
     private String brand;
-    private int cost;
+    private Money cost;
     private int maxSpeed;
     private double consumption;
 
-    public Vehicle(String brand, int cost, int maxSpeed, double consumption) {
+    public Vehicle(int id, String brand, Money cost, int maxSpeed, double consumption) {
+        this.id = id;
         this.brand = brand;
         this.cost = cost;
         this.maxSpeed = maxSpeed;
         this.consumption = consumption;
+    }
+
+
+    public int getId() {
+        return id;
     }
 
     public String getBrand() {
@@ -22,11 +32,11 @@ public abstract class Vehicle{
         this.brand = brand;
     }
 
-    public int getCost() {
+    public Money getCost() {
         return cost;
     }
 
-    public void setCost(int cost) {
+    public void setCost(Money cost) {
         this.cost = cost;
     }
 
@@ -47,4 +57,10 @@ public abstract class Vehicle{
     }
 
 
+
+    @Override
+    public String toString() {
+        return ", brand='" + brand + '\'' +
+                ", consumption=" + consumption + "}";
+    }
 }

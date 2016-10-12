@@ -1,19 +1,21 @@
 package com.epam.tm.oop.entity;
 
-import com.epam.tm.oop.entity.Vehicle;
+
+import org.joda.money.Money;
 
 public class Car extends Vehicle{
 
     private String segment;
 
-    public Car(String brand,String segment, int cost, int maxSpeed, double consumption) {
-        super(brand, cost, maxSpeed, consumption);
-
+    public Car(int id, String brand, Money cost, int maxSpeed, double consumption, String segment) {
+        super(id, brand, cost, maxSpeed, consumption);
         this.segment = segment;
     }
 
     @Override
     public String toString() {
-        return getBrand();
+        return "Car{" +
+                "segment='" + segment + '\''
+                + super.toString();
     }
 }

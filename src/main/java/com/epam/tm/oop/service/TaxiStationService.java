@@ -2,6 +2,8 @@ package com.epam.tm.oop.service;
 
 import com.epam.tm.oop.entity.TaxiStation;
 import com.epam.tm.oop.entity.Vehicle;
+import org.joda.money.CurrencyUnit;
+import org.joda.money.Money;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -17,10 +19,10 @@ public class TaxiStationService {
         return null;
     }
 
-    public int getTotalCostofCars(TaxiStation station) {
-        int res = 0;
+    public Money getTotalCostofCars(TaxiStation station) {
+        Money res = Money.zero(CurrencyUnit.USD);
         for (Vehicle r : station.getVehicles())
-            res += r.getCost();
+            res = res.plus(r.getCost());
         return res;
     }
 
@@ -30,8 +32,8 @@ public class TaxiStationService {
         return vehicles;
     }
 
-    public static final Comparator<Vehicle> SORTER_CARS_BY_CONSUMPTION = new VehicleComparator();
-
+    public static final Comparator<Vehicle> SORTER_CARS_BY_CONSUMPTION =
+                                                                new VehicleComparator();
     private static class VehicleComparator implements Comparator<Vehicle>{
         @Override
         public int compare(Vehicle o1, Vehicle o2) {

@@ -1,5 +1,8 @@
 package com.epam.tm.oop.entity;
 
+import org.joda.money.CurrencyUnit;
+import org.joda.money.Money;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,9 +47,9 @@ public class TaxiStation {
         public  static TaxiStation CreateTestTaxiStation(){
 
 
-            Car car1 = new Car("Toyota","S",1100,110,5.0);
-            Car car2 = new Car("Mercedes","S",2000,100,2.0);
-            Car car3 = new Car("Ferrari","S",3300,220,8.0);
+            Car car1 = new Car(1,"Toyota",Money.of(CurrencyUnit.USD, 1000), 110,5.0,"S");
+            Car car2 = new Car(2,"Mercedes",Money.of(CurrencyUnit.USD, 2000),100,2.0,"S");
+            Car car3 = new Car(3,"Ferrari",Money.of(CurrencyUnit.USD, 3000),220,8.0,"S");
 
             List<Vehicle> cars = new ArrayList<>();
 
