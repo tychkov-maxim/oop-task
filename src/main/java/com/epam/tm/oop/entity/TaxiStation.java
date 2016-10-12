@@ -1,11 +1,8 @@
 package com.epam.tm.oop.entity;
 
-import com.epam.tm.oop.service.Countable;
-import com.epam.tm.oop.service.FindVehicle;
 import com.epam.tm.oop.entity.impl.Car;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
 public class TaxiStation {

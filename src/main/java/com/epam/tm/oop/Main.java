@@ -2,6 +2,7 @@ package com.epam.tm.oop;
 
 import com.epam.tm.oop.entity.TaxiStation;
 import com.epam.tm.oop.service.CountCostService;
+import com.epam.tm.oop.service.FindVehicleService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,7 +33,8 @@ public class Main {
 //        CountAllCost count = new CountAllCost();
 //        log.info("Сумма всех ТС: " + taxi.getAllCost(count));
 //
-//        FindVehicleBySpeed finder = new FindVehicleBySpeed();
-//        log.info("Нашел авто: " + taxi.findVehicle(finder,220));
+        FindVehicleService findVehicleService = new FindVehicleService();
+
+        log.info("Нашел авто: " + findVehicleService.findVehicleByMaxSpeed(taxi,220));
     }
 }
