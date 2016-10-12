@@ -47,15 +47,17 @@ public class TaxiStation {
         public  static TaxiStation CreateTestTaxiStation(){
 
 
-            Car car1 = new Car(1,"Toyota",Money.of(CurrencyUnit.USD, 1000), 110,5.0,"S");
-            Car car2 = new Car(2,"Mercedes",Money.of(CurrencyUnit.USD, 2000),100,2.0,"S");
-            Car car3 = new Car(3,"Ferrari",Money.of(CurrencyUnit.USD, 3000),220,8.0,"S");
+            Car car1 = new Car(1,"Toyota",Money.of(CurrencyUnit.USD, 1000), 110,5.0,Car.EuroCarSegment.S);
+            Car car2 = new Car(2,"Mercedes",Money.of(CurrencyUnit.USD, 2000),100,2.0,Car.EuroCarSegment.S);
+            Car car3 = new Car(3,"Ferrari",Money.of(CurrencyUnit.USD, 3000),220,8.0,Car.EuroCarSegment.S);
+            Car car4 = new Car(4,"Kia",Money.of(CurrencyUnit.USD, 3000),125,1.6,Car.EuroCarSegment.B);
 
             List<Vehicle> cars = new ArrayList<>();
 
             cars.add(car1);
             cars.add(car2);
             cars.add(car3);
+            cars.add(car4);
 
             return new TaxiStation("test",cars);
         }
@@ -64,10 +66,6 @@ public class TaxiStation {
 
     @Override
     public String toString() {
-      String res = "Название таксопарка: " + name + "\nКолличество машин: " + cars.size();
-        for(Vehicle r : cars)
-            res += "\n" + r;
-
-        return res;
+        return "Name of taxi station: " + name + "\nAmount of Vehicle: " + cars.size();
     }
 }

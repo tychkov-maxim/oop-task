@@ -8,7 +8,9 @@ public abstract class Vehicle{
     private int id;
     private String brand;
     private Money cost;
+    /** Maximum speed of vehicle in kilometres per hour */
     private int maxSpeed;
+    /** Fuel consumption(litres per 100km) */
     private double consumption;
 
     public Vehicle(int id, String brand, Money cost, int maxSpeed, double consumption) {
