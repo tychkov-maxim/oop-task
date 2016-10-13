@@ -3,6 +3,8 @@ package com.epam.tm.oop.entity;
 import org.joda.money.Money;
 
 public class Bus extends PassengerVehicle {
+
+    /** uses like tourism or student buss or private charter*/
     private Uses uses;
 
     public Bus(int id, String brand, Money cost, int maxSpeed, double consumption, int amountPassengerSeat, Uses uses) {

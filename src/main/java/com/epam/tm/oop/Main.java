@@ -13,8 +13,8 @@ public class Main {
         TaxiStation taxiStation = TaxiStation.Builder.CreateTestTaxiStation();
         log.info("List of vehicles {}",taxiStation.getVehicles());
         TaxiStationService taxiStationService  = new TaxiStationService();
-        log.info("Sorted list of vehicles: {}",taxiStationService.SortCarsByConsumption(taxiStation,taxiStationService.SORTER_CARS_BY_CONSUMPTION));
-        log.info("The total cost of vehicles in taxi station: {}",taxiStationService.getTotalCostofCars(taxiStation));
+        log.info("Sorted list of vehicles: {}",taxiStationService.SortCars(taxiStation,TaxiStationService.SORTER_CARS_BY_CONSUMPTION));
+        log.info("The total cost of vehicles in taxi station: {}",taxiStationService.getTotalCostOfCars(taxiStation));
         log.info("Found vehicle: {}",taxiStationService.findVehicleByMaxSpeed(taxiStation,220));
     }
 }

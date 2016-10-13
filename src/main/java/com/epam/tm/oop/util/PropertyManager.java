@@ -16,7 +16,7 @@ public class PropertyManager {
         return ourInstance;
     }
 
-    private Properties propertyManager;
+    public Properties propertyManager;
 
     private PropertyManager(){
 
@@ -24,7 +24,7 @@ public class PropertyManager {
         propertyManager = new Properties();
 
         try {
-            propertyManager.load(PropertyManager.class.getClassLoader().getResourceAsStream("hello.properties"));
+            propertyManager.load(PropertyManager.class.getClassLoader().getResourceAsStream("prop.properties"));
         } catch (IOException e) {
             log.error("Error when try to read file",e);
         }

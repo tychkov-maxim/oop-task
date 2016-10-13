@@ -5,7 +5,7 @@ import org.joda.money.Money;
 
 public class Car extends PassengerVehicle{
 
-    /***/
+    /** Class of car by European classification */
     private EuroCarSegment segment;
 
     public Car(int id, String brand, Money cost, int maxSpeed, double consumption, int amountPassengerSeat, EuroCarSegment segment) {

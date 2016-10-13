@@ -19,14 +19,14 @@ public class TaxiStationService {
         return null;
     }
 
-    public Money getTotalCostofCars(TaxiStation station) {
+    public Money getTotalCostOfCars(TaxiStation station) {
         Money res = Money.zero(CurrencyUnit.USD);
         for (Vehicle r : station.getVehicles())
             res = res.plus(r.getCost());
         return res;
     }
 
-    public List<Vehicle> SortCarsByConsumption(TaxiStation taxiStation, Comparator<Vehicle> sorter){
+    public List<Vehicle> SortCars(TaxiStation taxiStation, Comparator<Vehicle> sorter){
         List<Vehicle> vehicles = new ArrayList<>(taxiStation.getVehicles());
         vehicles.sort(sorter);
         return vehicles;
