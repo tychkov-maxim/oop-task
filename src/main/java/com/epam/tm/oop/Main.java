@@ -10,8 +10,6 @@ public class Main {
     public static final Logger log = LoggerFactory.getLogger(Main.class);
 
     public static void main(String[] args){
-
-
         TaxiStation taxiStation = TaxiStation.Builder.CreateTestTaxiStation();
         log.info("List of vehicles {}",taxiStation.getVehicles());
         TaxiStationService taxiStationService  = new TaxiStationService();

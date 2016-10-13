@@ -47,10 +47,10 @@ public class TaxiStation {
         public  static TaxiStation CreateTestTaxiStation(){
 
 
-            Car car1 = new Car(1,"Toyota",Money.of(CurrencyUnit.USD, 1000), 110,5.0,Car.EuroCarSegment.S);
-            Car car2 = new Car(2,"Mercedes",Money.of(CurrencyUnit.USD, 2000),100,2.0,Car.EuroCarSegment.S);
-            Car car3 = new Car(3,"Ferrari",Money.of(CurrencyUnit.USD, 3000),220,8.0,Car.EuroCarSegment.S);
-            Car car4 = new Car(4,"Kia",Money.of(CurrencyUnit.USD, 3000),125,1.6,Car.EuroCarSegment.B);
+            Car car1 = new Car(1,"Toyota",Money.of(CurrencyUnit.USD, 1000), 110,5.0,4,Car.EuroCarSegment.S);
+            Car car2 = new Car(2,"Mercedes",Money.of(CurrencyUnit.USD, 2000),100,2.0,4,Car.EuroCarSegment.S);
+            Car car3 = new Car(3,"Ferrari",Money.of(CurrencyUnit.USD, 3000),220,8.0,4,Car.EuroCarSegment.S);
+            Car car4 = new Car(4,"Kia",Money.of(CurrencyUnit.USD, 3000),125,1.6,4,Car.EuroCarSegment.B);
 
             List<Vehicle> cars = new ArrayList<>();
 
