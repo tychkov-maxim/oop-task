@@ -12,6 +12,7 @@ public class Bus extends PassengerVehicle {
         this.uses = uses;
     }
 
+
     public Uses getUses() {
         return uses;
     }
@@ -20,8 +21,16 @@ public class Bus extends PassengerVehicle {
         this.uses = uses;
     }
 
+    @Override
+    public String toString() {
+        return "Bus{" +
+                "uses=" + uses + super.toString();
+    }
+
+
+
     public enum Uses{
-        PRIVATE_CHARTER("private charter"),TOURISM("tourism"),STUDENT_TRANSOPRT("student transport");
+        PRIVATE_CHARTER("private charter"),TOURISM("tourism"), STUDENT_TRANSPORT("student transport");
 
         private String uses;
 
