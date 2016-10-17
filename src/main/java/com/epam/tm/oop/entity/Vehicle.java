@@ -21,7 +21,6 @@ public abstract class Vehicle{
         this.consumption = consumption;
     }
 
-
     public int getId() {
         return id;
     }
@@ -58,6 +57,22 @@ public abstract class Vehicle{
         this.consumption = consumption;
     }
 
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Vehicle vehicle = (Vehicle) o;
+
+        return id == vehicle.id;
+
+    }
+
+    @Override
+    public int hashCode() {
+        return id;
+    }
 
 
     @Override
